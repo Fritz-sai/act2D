@@ -67,7 +67,6 @@ public class Jirexes extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
         txtName9 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(javax.swing.UIManager.getDefaults().getColor("nb.versioning.conflicted.color"));
@@ -227,9 +226,6 @@ public class Jirexes extends javax.swing.JFrame {
         txtName9.setOpaque(true);
         getContentPane().add(txtName9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 460, -1, -1));
 
-        jButton3.setText("jButton3");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 630, -1, -1));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -275,7 +271,6 @@ public class Jirexes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
