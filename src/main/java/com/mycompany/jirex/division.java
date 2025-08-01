@@ -43,6 +43,12 @@ public class division extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cumpute, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 190, -1, -1));
+
+        num1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(num1, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 58, 155, -1));
         getContentPane().add(num2, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 98, 155, -1));
 
@@ -74,6 +80,10 @@ public class division extends javax.swing.JFrame {
           new operation().setVisible(true);
            this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num1ActionPerformed
 
     /**
      * @param args the command line arguments
