@@ -42,6 +42,8 @@ public class tikctacktoo extends javax.swing.JFrame {
         seven = new javax.swing.JTextField();
         eight = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,6 +57,7 @@ public class tikctacktoo extends javax.swing.JFrame {
         getContentPane().add(player2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 110, -1));
 
         three.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        three.setText("2");
         getContentPane().add(three, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 70, 60));
 
         jLabel1.setText("Player1");
@@ -67,12 +70,15 @@ public class tikctacktoo extends javax.swing.JFrame {
         getContentPane().add(player1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 110, -1));
 
         one.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        one.setText("2");
         getContentPane().add(one, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 70, 60));
 
         two.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        two.setText("2");
         getContentPane().add(two, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 70, 60));
 
         six.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        six.setText("2");
         six.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sixActionPerformed(evt);
@@ -81,18 +87,23 @@ public class tikctacktoo extends javax.swing.JFrame {
         getContentPane().add(six, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 70, 60));
 
         four.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        four.setText("2");
         getContentPane().add(four, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 70, 60));
 
         five.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        five.setText("2");
         getContentPane().add(five, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 70, 60));
 
         nine.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        nine.setText("2");
         getContentPane().add(nine, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 70, 60));
 
         seven.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        seven.setText("2");
         getContentPane().add(seven, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 70, 60));
 
         eight.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        eight.setText("2");
         eight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eightActionPerformed(evt);
@@ -108,6 +119,12 @@ public class tikctacktoo extends javax.swing.JFrame {
         });
         getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, -1, -1));
 
+        jLabel3.setText("[ 0 ] - Player1");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
+
+        jLabel4.setText("[ 1 ] - Player2");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -120,8 +137,8 @@ public class tikctacktoo extends javax.swing.JFrame {
         int playerOne = Integer.parseInt(player1.getText());
         int playerTwo = Integer.parseInt(player2.getText());
         
-        int scorePlayerOne = playerOne + 1;
-        int scorePlayerTwo = playerTwo + 1;
+        int scorePlayerOne = playerOne;
+        int scorePlayerTwo = playerTwo;
         
         
         int num1 = Integer.parseInt(one.getText());
@@ -134,62 +151,349 @@ public class tikctacktoo extends javax.swing.JFrame {
         int num8 = Integer.parseInt(eight.getText());
         int num9 = Integer.parseInt(nine.getText());
         
+        if (num1 > 2 || num2 > 2|| num3 > 2
+            || num4 > 2 || num5 > 2 || num6 > 2
+            || num7 > 2 || num8 > 2 || num9 > 2) {
+            player1.setText(""+ scorePlayerOne);
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Invalid Number");
+            
+        }
+        
         if (num1 == 0 && num4 == 0 && num7 == 0) {
+            
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                player1.setText(""+0);
+                     player2.setText(""+0);
+                JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+                     
+        }
             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
+            
         } else if ( num2 == 0 && num5 == 0 && num8 == 0) {
-            scorePlayerOne = scorePlayerOne +1;
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                 player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+           
+        }
+             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         }else if ( num3 == 0 && num6 == 0 && num9 == 0) {
-           scorePlayerOne = scorePlayerOne +1;
+           
+           one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                 player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+           
+        }
+             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         } else if ( num1 == 0 && num2 == 0 && num3 == 0) {
-            scorePlayerOne = scorePlayerOne +1;
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                  player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+          
+        }
+             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         }else if ( num4 == 0 && num5 == 0 && num6 == 0) {
-            scorePlayerOne = scorePlayerOne +1;
+            
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                 player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+           
+        }
+             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         }else if ( num7 == 0 && num8 == 0 && num9 == 0) {
+            
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                  player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+          
+        }
             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         }else if ( num1 == 0 && num5 == 0 && num9 == 0) {
+            
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                 player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+           
+        }
             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         }else if ( num3 == 0 && num5 == 0 && num7 == 0) {
+            
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            if (playerOne == 5) {
+                player1.setText(""+0);
+             player2.setText(""+0);
+            JOptionPane.showMessageDialog(null, "Congrats Player 1 win");
+            
+        }
             scorePlayerOne = scorePlayerOne +1;
             player1.setText(""+ scorePlayerOne);
         } else if (num1 == 1 && num4 == 1 && num7 == 1) {
-            scorePlayerTwo = scorePlayerTwo + 1;
-            player1.setText(""+ scorePlayerOne);
-        } else if ( num2 == 1 && num5 == 1 && num8 == 1) {
-            scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        }else if ( num3 == 1 && num6 == 1 && num9 == 1) {
-           scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        } else if ( num1 == 1 && num2 == 1 && num3 == 1) {
-            scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        }else if ( num4 == 1 && num5 == 1 && num6 == 1) {
-            scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        }else if ( num7 == 1 && num8 == 1 && num9 == 1) {
-            scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        }else if ( num1 == 1 && num5 == 1&& num9 == 1) {
-            scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        }else if ( num3 == 1 && num5 == 1 && num7 == 1) {
-            scorePlayerTwo = scorePlayerTwo +1;
-            player1.setText(""+ scorePlayerTwo);
-        }
-        
-        if (playerOne == 5) {
-            JOptionPane.showMessageDialog(null, "Player 1 win");
-        }
-        
-        if (playerTwo == 5) {
+            
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
             JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }scorePlayerTwo = scorePlayerTwo + 1;
+            
+            player2.setText(""+ scorePlayerTwo);
+            
+        } else if ( num2 == 1 && num5 == 1 && num8 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+              scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        }else if ( num3 == 1 && num6 == 1 && num9 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+             scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        } else if ( num1 == 1 && num2 == 1 && num3 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+              scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        }else if ( num4 == 1 && num5 == 1 && num6 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+              scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        }else if ( num7 == 1 && num8 == 1 && num9 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+              scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        }else if ( num1 == 1 && num5 == 1&& num9 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+              scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        }else if ( num3 == 1 && num5 == 1 && num7 == 1) {
+           
+            one.setText(""+ 2);
+            two.setText(""+ 2);
+            three.setText(""+ 2);
+            four.setText(""+ 2);
+            five.setText(""+ 2);
+            six.setText(""+ 2);
+            seven.setText(""+ 2);
+            eight.setText(""+ 2);
+            nine.setText(""+ 2);
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+             if (playerTwo == 4) {
+            JOptionPane.showMessageDialog(null, "Congrats Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
+        }
+              scorePlayerTwo = scorePlayerTwo +1;
+            player2.setText(""+ scorePlayerTwo);
+        }
+        
+        if (playerOne >= 5) {
+            JOptionPane.showMessageDialog(null, "Player 1 win");
+            player1.setText(""+0);
+             player2.setText(""+0);
+        }
+        
+        if (playerTwo >= 5) {
+            JOptionPane.showMessageDialog(null, "Player 2 win");
+            player2.setText(""+0);
+            player1.setText(""+0);
         }
 
         
@@ -247,6 +551,8 @@ public class tikctacktoo extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField nine;
     private javax.swing.JTextField one;
     private javax.swing.JTextField player1;
