@@ -37,8 +37,13 @@ public class rockpaperscissor extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 255));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(playerOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 187, 30));
         getContentPane().add(playerTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 187, 30));
@@ -74,6 +79,16 @@ public class rockpaperscissor extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, -1, 30));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("HB");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("HB");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 40, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 40, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -86,20 +101,28 @@ public class rockpaperscissor extends javax.swing.JFrame {
         
         if (player1 == 1 && player2 == 1) {
             JOptionPane.showMessageDialog(null, "Draw");
+            
         } else if (player1 == 1 && player2 == 2) {
             JOptionPane.showMessageDialog(null, "Player 2 Win");
+            
         }else if (player1 == 1 && player2 == 3) {
             JOptionPane.showMessageDialog(null, "Player 1 Win");
+            
         }else if (player1 == 2 && player2 == 1) {
             JOptionPane.showMessageDialog(null, "Player 2 Win");
+            
         }else if (player1 == 2 && player2 == 2) {
             JOptionPane.showMessageDialog(null, "Draw");
+            
         }else if (player1 == 2 && player2 == 3) {
             JOptionPane.showMessageDialog(null, "Player 1 win");
+            
         }else if (player1 == 3 && player2 == 1) {
             JOptionPane.showMessageDialog(null, "Player 2 Win");
+            
         }else if (player1 == 3 && player2 == 2) {
             JOptionPane.showMessageDialog(null, "player 1 win");
+            
         }else if (player1 == 3 && player2 == 3) {
             JOptionPane.showMessageDialog(null, "Draw");
         }
@@ -154,6 +177,10 @@ public class rockpaperscissor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField playerOne;
     private javax.swing.JTextField playerTwo;
     // End of variables declaration//GEN-END:variables
