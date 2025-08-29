@@ -53,7 +53,6 @@ public class Jirexes extends javax.swing.JFrame {
         jTextField13 = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
@@ -191,23 +190,19 @@ public class Jirexes extends javax.swing.JFrame {
         jRadioButton2.setOpaque(true);
         getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
 
-        jCheckBox1.setText("Mech");
-        jCheckBox1.setOpaque(true);
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 60, -1));
-
-        jCheckBox2.setText("CSE");
+        jCheckBox2.setText("ACT");
         jCheckBox2.setOpaque(true);
         getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 50, -1));
 
-        jCheckBox3.setText("IT");
+        jCheckBox3.setText("CT");
         jCheckBox3.setOpaque(true);
         getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 40, -1));
 
-        jCheckBox4.setText("ECE");
+        jCheckBox4.setText("HM");
         jCheckBox4.setOpaque(true);
         getContentPane().add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 50, -1));
 
-        jCheckBox5.setText("Civil");
+        jCheckBox5.setText("BSOA");
         jCheckBox5.setOpaque(true);
         getContentPane().add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 60, -1));
 
@@ -236,7 +231,7 @@ public class Jirexes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new news().setVisible(true);
+        new Jirexes().setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -255,7 +250,6 @@ public class Jirexes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;

@@ -43,6 +43,8 @@ public class vote extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+
+        txtage.setText("Enter Your Age");
         getContentPane().add(txtage, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 230, -1));
 
         pack();
@@ -54,7 +56,7 @@ public class vote extends javax.swing.JFrame {
         if (age <= 17 && age >= 5) {
             JOptionPane.showMessageDialog(null, "Your not allowed to vote age:" + age );
         } else if (age >= 18 && age < 100) {
-            JOptionPane.showMessageDialog(null, "sai", "sadaw"+ age, JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Valid"+ age, "Age", JOptionPane.INFORMATION_MESSAGE);
         }else {
             JOptionPane.showMessageDialog(null, "invalid your age", "invalid", JOptionPane.INFORMATION_MESSAGE);
         }

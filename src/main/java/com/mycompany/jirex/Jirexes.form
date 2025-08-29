@@ -371,20 +371,9 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mech"/>
-        <Property name="opaque" type="boolean" value="true"/>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="410" y="370" width="60" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CSE"/>
+        <Property name="text" type="java.lang.String" value="ACT"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
@@ -395,7 +384,7 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="IT"/>
+        <Property name="text" type="java.lang.String" value="CT"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
@@ -406,7 +395,7 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ECE"/>
+        <Property name="text" type="java.lang.String" value="HM"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
@@ -417,7 +406,7 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Civil"/>
+        <Property name="text" type="java.lang.String" value="BSOA"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Constraints>
