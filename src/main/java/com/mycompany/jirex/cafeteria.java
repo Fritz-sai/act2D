@@ -22,45 +22,46 @@ public class cafeteria {
         System.out.println("[3] - egg {15}");
         
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter Your Order:");
-        int order = input.nextInt();
-        System.out.println("Enter Quantity:");
-        int quantity = input.nextInt();
-        System.out.println("Enter Age:");
-        int age = input.nextInt();
-        float discount = 0.12f;
-        double total = 0;
-        
+        int order = 4;
        
         
-        
-        
-        
-        
-        if (order == 1) {
+        while (order >= 4) {
+            System.out.println("Enter Your Order:");
+            order = input.nextInt();
+            
+        }
+        System.out.println("Enter Quantity:");
+            int quantity = input.nextInt();
+
+            float discount = 0.12f;
+            double total = 0;
+            if (order == 1) {
             total = quantity * 10;
-        } else if (order == 2) {
-            total = quantity * 20;
-        } else if (order == 3) {
-            total = quantity * 15;
-        }
-        if (age >= 12 && age <= 18) {
-            double discounted = total * discount;
-            System.out.println("12% Discount:"+ discounted );
-            total = total - discounted;
-        }
-        System.out.println("Total:" + total);
-        double change = -1;
+            } else if (order == 2) {
+                total = quantity * 20;
+            } else if (order == 3) {
+                total = quantity * 15;
+            }
+            System.out.println("Enter Age:");
+            int age = input.nextInt();
+            if (age >= 12 && age <= 18) {
+                double discounted = total * discount;
+                System.out.println("12% Discount:"+ discounted );
+                total = total - discounted;
+            }
+            System.out.println("Total:" + total);
+            double change = -1;
+
+            while (change <= -1) {
+                System.out.println("Enter payment:");
+                int payment = input.nextInt();
+                change = payment - total;
+
+            } 
+            if (change > 0) {
+                System.out.println("Change:" + change);
+            }
         
-        while (change <= -1) {
-            System.out.println("Enter payment:");
-            int payment = input.nextInt();
-            change = payment - total;
-           
-        } 
-        if (change >= 0) {
-            System.out.println("Change:" + change);
-        }
         
         
     }
