@@ -26,7 +26,15 @@ public class cafeteria {
         int order = input.nextInt();
         System.out.println("Enter Quantity:");
         int quantity = input.nextInt();
-        int total = 0;
+        System.out.println("Enter Age:");
+        int age = input.nextInt();
+        float discount = 0.12f;
+        double total = 0;
+        
+       
+        
+        
+        
         
         
         if (order == 1) {
@@ -36,8 +44,13 @@ public class cafeteria {
         } else if (order == 3) {
             total = quantity * 15;
         }
+        if (age >= 12 && age <= 18) {
+            double discounted = total * discount;
+            System.out.println("12% Discount:"+ discounted );
+            total = total - discounted;
+        }
         System.out.println("Total:" + total);
-        int change = -1;
+        double change = -1;
         
         while (change <= -1) {
             System.out.println("Enter payment:");
